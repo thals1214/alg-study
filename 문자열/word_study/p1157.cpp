@@ -4,28 +4,28 @@
 using namespace std;
 
 int main() {
-	string s;
-	int arr[26] = {0,}; // alphabet array 
-	cin >> s;
-	
-	for (int i = 0; i < s.length(); i++) {
-		if ((int)(s[i]) <= 90) {
-			arr[(int)s[i] - 65]++; // LargeText 
+	string word;
+	int alph_arr[26] = {0,};
+
+	cin >> word;
+	for (int i = 0; i < word.length(); i++) {
+		if (word[i] <= 'Z') {
+			alph_arr[(int)word[i] - 65] += 1; // 대문자
 		}
 		else
-			arr[(int)s[i] - 97]++; // SmallText 
+			alph_arr[(int)word[i] - 97] += 1; // 소문자
 	}
 
-	char max = -1, flag;
+	int max = 0; char final;
 	for (int i = 0; i < 26; i++) {
-		if (arr[i] > max) {
-			max = arr[i];
-			flag = i +65;
+		if (max < alph_arr[i]) {
+			max = alph_arr[i];
+			final = i+ 65;
 		}
-		else if (arr[i] == max) {
-			flag = '?';
+		else if (max == alph_arr[i]) {
+			final = '?';
 		}
 	}
-	cout << flag << endl;
 
+	cout << final;
 }
