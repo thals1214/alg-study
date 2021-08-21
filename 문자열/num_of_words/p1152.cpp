@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	string sentence;
-	getline(cin, sentence); // getline으로 sentence받기 
+	getline(cin, sentence); // getline으로 sentence받기 (띄어쓰기 포함)
 
 	int cnt = 0;
 	bool space = false;
