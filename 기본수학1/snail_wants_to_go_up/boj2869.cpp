@@ -1,26 +1,19 @@
 #include <iostream>
-
 using namespace std;
-// time error 
+// time error
 int main2() {
 	int A, B, V;
 	cin >> A >> B >> V;
 
-	int height = 0;
-	int cnt = 0;
-	while (true) {
+	int height = 0, cnt = 0;
+	while (height <= V) {
+		cnt++;
 		height += A - B;
-		if (height < V) {
-			cnt += 1;
-			if (height + A == V) {
-				cout << cnt + 1;
-				return 0;
-			}
-		}
-		else {
-			break;
+
+		if (height + B >= V) {
+			cout << cnt;
+			return 0;
 		}
 	}
-	cout << cnt + 1;
-
+	cout << cnt;
 }
