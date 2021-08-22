@@ -5,15 +5,11 @@ int main() {
 	int A, B, V;
 	cin >> A >> B >> V;
 
-	int height = 0, cnt = 0;
-	while (height <= V) {
-		cnt++;
-		height += A - B;
-		
-		if (height + B >= V) {
-			cout << cnt;
-			return 0;
-		}
-	}
+	// don't use iterative methods 
+	int cnt = 1;
+	cnt += (V - A) / (A - B);
+	if (((V - A) % (A - B)) != 0) cnt++;
+	
 	cout << cnt;
+
 }
