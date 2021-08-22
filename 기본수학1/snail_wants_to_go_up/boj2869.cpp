@@ -1,7 +1,8 @@
 #include <iostream>
 
 using namespace std;
-int main() {
+// time error 
+int main2() {
 	int A, B, V;
 	cin >> A >> B >> V;
 
