@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30428.66
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "star_drawing", "star_drawing.vcxproj", "{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Debug|x64.ActiveCfg = Debug|x64
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Debug|x64.Build.0 = Debug|x64
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Debug|x86.Build.0 = Debug|Win32
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Release|x64.ActiveCfg = Release|x64
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Release|x64.Build.0 = Release|x64
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Release|x86.ActiveCfg = Release|Win32
+		{1B7F23E0-C6EA-41C9-B79E-1C54EC2443CB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8FB11C8-FA82-4B79-A47F-E3DD421143AA}
+	EndGlobalSection
+EndGlobal
