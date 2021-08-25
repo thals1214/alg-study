@@ -20,6 +20,7 @@ int board(int i, int j, char** arr) {
 	return sum;
 }
 
+// case where black starts first
 int board2(int i, int j, char** arr) {
 	int val1 = i; int val2 = j;
 	int sum = 0;
