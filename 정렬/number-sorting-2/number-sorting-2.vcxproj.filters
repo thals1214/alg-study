@@ -18,5 +18,8 @@
     <ClCompile Include="boj2751.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="boj2751-sol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
