@@ -21,7 +21,7 @@ int main() {
 
 	sort(arr.begin(), arr.end());
 
-	// 산술평균 출력 - 소수점 이하 첫째 자리에서 반올림
+	// 산술평균 출력 - 소수점 이하 첫째 자리에서 반올림 -> round함수 
 	sum = round((float)sum / num);
 	cout << sum <<"\n";
 
