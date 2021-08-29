@@ -1,22 +1,22 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath>
+#include <cmath> // to use round() function
 
 using namespace std;
 
 int main() {
-	int num, sum = 0;
-	int arr2[8001] = {0,};
-	int temp;
-	vector<int> arr;
-	cin >> num;
+	int num, sum = 0, temp;
+	vector<int> arr; // arr to sort out numbers
+	int arr2[8001] = {0,}; // arr to count same values 
+	
+	cin >> num; // get total number
 
 	for (int i = 0; i < num; i++) {
 		cin >> temp;
 		sum += temp;
 		arr.push_back(temp);
-		arr2[temp + 4000]++;
+		arr2[temp + 4000]++; 
 	}
 
 	sort(arr.begin(), arr.end());
@@ -30,7 +30,7 @@ int main() {
 	cout << arr[temp] <<"\n";
 
 	// 최빈값 출력
-	int max = 0, index;
+	int max = 0, index; 
 	bool flag = false;
 
 	for (int i = 0; i < 8001; i++) {
@@ -60,7 +60,7 @@ int main() {
 	}
 
 	// 범위 출력 (max-min)
-	temp = arr.back() - arr.front(); //첫번째 - 두번째
+	temp = arr.back() - arr.front(); // max number - min number
 	cout << temp << "\n";
 
 
