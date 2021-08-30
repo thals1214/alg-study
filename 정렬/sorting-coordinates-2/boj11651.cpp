@@ -4,30 +4,24 @@
 
 using namespace std;
 
-// driver function to sort the 2D matrix
-// on basis of a particular column;
-bool sort_second_col(const vector<int>& v1, const vector<int>& v2) {
-	return v1[1] < v2[1];
+bool cmp(pair<int, int> a, pair<int, int> b) {
+	if (a.second < b.second)
+		return true;
+	else if (a.second == b.second)
+		if (a.first < b.first) return true;
+	return false;
 }
 
 int main() {
 	int N;
 	cin >> N;
 
-	// vector array 선언 
-	vector <vector<int>> arr(N, vector<int>(2, 0));
+	vector<pair<int, int>> v(N); // vector pair 이용하기 
 	for (int i = 0; i < N; i++)
-		for (int j = 0; j < 2; j++) {
-			cin >> arr[i][j];
-		}
-	// sorting on basis of 2nd column
-	sort(arr.begin(), arr.end());
-	sort(arr.begin(), arr.end(), sort_second_col);
-	
+		cin >> v[i].first >> v[i].second;
+
+	sort(v.begin(), v.end(), cmp);
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < 2; j++) {
-			cout << arr[i][j] << " ";
-		}
-		cout << "\n";
+		cout << v[i].first << " " << v[i].second << "\n";
 	}
 }
