@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// using comparing method
+
 bool cmp(pair<int, int> a, pair<int, int> b) {
 	if (a.second < b.second)
 		return true;
@@ -13,10 +15,11 @@ bool cmp(pair<int, int> a, pair<int, int> b) {
 }
 
 int main() {
+	
 	int N;
 	cin >> N;
 
-	vector<pair<int, int>> v(N); // vector pair 이용하기 
+	vector<pair<int, int>> v(N); // using vector pair for data typed
 	for (int i = 0; i < N; i++)
 		cin >> v[i].first >> v[i].second;
 
