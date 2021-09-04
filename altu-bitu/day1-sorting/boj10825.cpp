@@ -25,7 +25,7 @@ bool cmp(const info& i1, const info& i2) {
 bool cmpAdv(const info& i1, const info& i2) {
 	if (i1.korean != i2.korean) // 국어 점수가 다르다면 감소하는 순서
 		return i1.korean > i2.korean;
-	if (i1.english != i2.english) // 영어 점수가 다르다면 감소하는 순서
+	if (i1.english != i2.english) // 영어 점수가 다르다면 증가하는 순서
 		return i1.english < i2.english;
 	if (i1.math != i2.math) // 수학 점수가 다르다면 감소하는 순서
 		return i1.math > i2.math;
