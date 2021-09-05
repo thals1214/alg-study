@@ -4,8 +4,8 @@
 using namespace std;
 
 int w(int a, int b, int c) {
-	vector<int> arr;
-	arr.assign()
+	if (a <= 0 || b <= 0 || c <= 0) return 1;
+	if (a > 20 || b > 20 || c > 20) return w(20, 20, 20);
 
 
 	return val;
