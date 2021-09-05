@@ -2,7 +2,6 @@
 
 using namespace std;
 
-// 시간 초과 
 
 void num_fibonacci(int n) {
 	int zeros = 0, ones = 0;
