@@ -1,4 +1,4 @@
-/* gold */
+ï»¿/* gold */
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -6,16 +6,16 @@
 using namespace std;
 
 /*
-¿ì¼±¼øÀ§ Å¥ (ÃÖ¼Ò Èü)¿¡´Â °¡Àå Å« ¼ö ºÎÅÍ N¹øÂ° Å« ¼ö±îÁö ÃÑ N°³ÀÇ ¼ıÀÚ°¡ µé¾îÀÖÀ½
-°¡Àå Å« ¼ö ºÎÅÍ N¹øÂ° Å«¼ö±îÁö¸¦ ÃÖ¼Ò heap¿¡ ³Ö¾ú±â ¶§¹®¿¡ root¿¡ ÀÖ´Â °ªÀº N¹øÂ° Å« ¼ö°¡ µÇ°Ô µÊ
+ìš°ì„ ìˆœìœ„ í (ìµœì†Œ í™)ì—ëŠ” ê°€ì¥ í° ìˆ˜ ë¶€í„° Në²ˆì§¸ í° ìˆ˜ê¹Œì§€ ì´ Nê°œì˜ ìˆ«ìê°€ ë“¤ì–´ìˆìŒ
+ê°€ì¥ í° ìˆ˜ ë¶€í„° Në²ˆì§¸ í°ìˆ˜ê¹Œì§€ë¥¼ ìµœì†Œ heapì— ë„£ì—ˆê¸° ë•Œë¬¸ì— rootì— ìˆëŠ” ê°’ì€ Në²ˆì§¸ í° ìˆ˜ê°€ ë˜ê²Œ ë¨
 */
 int main() {
-	// ÀÔÃâ·Â ¼Óµµ Çâ»ó
+	// ì…ì¶œë ¥ ì†ë„ í–¥ìƒ
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
 	int n, input;
-	priority_queue<int, vector<int>, greater<>> pq; // ÃÖ¼Ò Èü , Á¤·ÄÀÌ¶û ¹İ´ë
+	priority_queue<int, vector<int>, greater<>> pq; // ìµœì†Œ í™ , ì •ë ¬ì´ë‘ ë°˜ëŒ€
 	 
 	cin >> n;
 	int size = n * n;
@@ -30,6 +30,6 @@ int main() {
 			pq.push(input);
 		}
 	}
-	// Ãâ·Â
+	// ì¶œë ¥
 	cout << pq.top();
 }
