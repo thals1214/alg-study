@@ -1,19 +1,46 @@
-/* medium */
 #include <iostream>
-#include <cmath>
+#include <cstdio>
 
-using namespace std;
-int cnt = 0;
+int solution(int n, int r, int c) {
+	int ans = 0; // 방문수 
 
-void z(int n, int r, int c, int row, int col) {
-	if (n == 1) {
+	int x = 1 << (n - 1); // x = 2^ (n-1) shift 연산자 
+	int y = x;
 
+	while (n-- > 0) {
+		int temp = 1 << (n - 1); // 현재 사분면의 길이 /2 
+		int skip = 1 << 2 * n; // 방문했다고 가정하는 수의 크기 
+
+		if (r < y && c < x) {
+			// 1사분면
+			x -= temp;
+			y -= temp;
+		}
+		else if (r < y && x <= c) {
+			// 2사분면
+			ans += skip;
+			x += temp;
+			y -= temp;
+		}
+		else if (y <= r && c < x) {
+			// 3사분면 
+			ans += skip * 2;
+			x -= temp;
+			y += temp;
+		}
+		else {
+			// 4사분면
+			ans += skip * 3;
+			x += temp;
+			y += temp;
+		}
 	}
+	return ans;
 }
+
 int main() {
 	int n, r, c;
-	cin >> n >> r >> c;
-
-	z(n, r, c , 0, 0);
-	
+	scanf_s("%d %d %d", &n, &r, &c);
+	printf("%d", solution(n, r, c));
+	return 0;
 }
