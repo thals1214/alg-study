@@ -1,3 +1,5 @@
+/* average */
+
 #include <iostream>
 #include <cstdio>
 
@@ -16,13 +18,13 @@ int solution(int n, int r, int c) {
 			x -= temp;
 			y -= temp;
 		}
-		else if (r < y && x <= c) {
+		else if (r < y && c >= x) {
 			// 2사분면
 			ans += skip;
 			x += temp;
 			y -= temp;
 		}
-		else if (y <= r && c < x) {
+		else if (r >= y && c < x) {
 			// 3사분면 
 			ans += skip * 2;
 			x -= temp;
