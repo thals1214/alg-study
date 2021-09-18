@@ -1,3 +1,5 @@
+/* average level */
+
 #include <string>
 #include <vector>
 #include <algorithm>
