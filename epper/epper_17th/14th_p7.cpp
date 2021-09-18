@@ -32,10 +32,6 @@ int main() {
 		words.push_back(temp);
 	}
 
-	//for (auto iter : words) {
-	//	cout << iter << '\n';
-	//}
-
 	result = enlarge(r, c, z_r, z_c, words);
 	
 	for (auto iter : result) {
