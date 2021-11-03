@@ -10,8 +10,8 @@
 
 using namespace std;
 
-vector<vector<int>> adj_matrix;
-vector<vector<bool>> adj_list;
+vector<vector<bool>> adj_matrix;
+vector<vector<int>> adj_list;
 
 vector<bool> visited_recur;
 
@@ -82,7 +82,7 @@ vector<int> bfs(int n, int v){
         q.pop();
         result.push_back(node);
         //인접행렬로 검사
-        for(int i = 1; <= n; i++){
+        for(int i = 1; i<= n; i++){
             if(adj_matrix[node][i] && !visited[i]){
                 visited[i] = true;
                 q.push(i); //앞으로 탐색해야할 노드이므로 큐에 삽입
@@ -91,7 +91,7 @@ vector<int> bfs(int n, int v){
         //인접리스트로 검사
         for(int i = 0; i<adj_list[node].size();i++){
             if(!visited[adj_list[node][i]]){
-                visited(adj_list[node][i])  = true;
+                visited[adj_list[node][i]]  = true;
                 q.push(adj_list[node][i]);
             }
         }
